@@ -1,0 +1,319 @@
+%font-settings {
+	font-weight: 500;
+	font-size: 18px;
+	font-style: normal;
+	line-height: 1.17em;
+	letter-spacing: 0.02em;
+}
+
+%change-color-and-fill {
+	color: $color-for-hovered;
+	fill: $color-for-hovered;
+}
+
+%bottom-line-under-active-link {
+	display: inline-block;
+	position: absolute;
+
+	// margin-top: 8px;
+
+	width: 100%;
+	height: 4px;
+	background-color: $color-for-hovered;
+	border-radius: 4px;
+}
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+header {
+	@include check-to-visibility(10px);
+
+	.container {
+		position: relative;
+	} //header .container
+
+	.logo {
+		display: inline-block;
+		@media screen and (min-width: 1200px) {
+			font-size: 26px;
+			line-height: 1.19em;
+		}
+	} //header .logo
+
+	nav {
+		position: relative;
+		// padding: 0 $width-of-container-padding;
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			align-items: center;
+
+			height: 80px;
+		}
+	} //header nav
+} //header
+
+.menu-button-container {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 0px;
+
+	height: 60px;
+
+	@media screen and (min-width: 768px) {
+		display: inline-flex;
+		margin-right: 81px;
+		padding-right: 0;
+		height: 100%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 85px;
+	}
+} //.menu-button-container
+
+.header-menu-button {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	border: none;
+	outline: none;
+	background-color: transparent;
+
+	transition: fill $trans-time-and-bezier;
+
+	.header-button-icon-close {
+		display: none;
+	} //.header-menu-button .header-button-icon-close
+
+	&.is-open .header-button-icon-close {
+		display: block;
+	} //.header-menu-button.is-open .header-button-icon-close
+
+	&.is-open .header-button-icon-menu {
+		display: none;
+	} //.header-menu-button.is-open .header-button-icon-menu
+
+	&:hover,
+	&:focus {
+		@extend %change-color-and-fill;
+	} //.header-menu-button:hover
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+} //.header-menu-button
+
+.menu-container {
+	// padding: 60px $width-of-container-padding;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	font-weight: 500;
+	font-size: 18px;
+	font-style: normal;
+	line-height: 1.17em;
+	letter-spacing: 0.02em;
+
+	background-color: white;
+	z-index: 100;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+
+		border-top: 1px solid #ececec;
+
+		&.is-open {
+			display: block;
+		} //.menu-container.is-open
+	}
+
+	@media screen and (min-width: 768px) {
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0;
+
+		width: 100%;
+
+		font-size: 14px;
+		line-height: 1.14em;
+	}
+} //.menu-container
+
+.menu-nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 60px;
+
+	&-item {
+		display: block;
+		position: relative;
+
+		&:not(:last-child) {
+			@media screen and (max-width: 767px) {
+				margin-bottom: 40px;
+			}
+			@media screen and (min-width: 768px) {
+				margin-right: 50px;
+				margin-bottom: 0px;
+			}
+		} //.menu-nav-item:not(:last-child)
+	} //.menu-container .menu-nav-item
+
+	&-item-link {
+		transition: color $trans-time-and-bezier;
+
+		&.current::after {
+			content: '';
+			@extend %bottom-line-under-active-link;
+			top: calc(100% + 8px);
+			left: 0;
+
+			transform: scaleX(1);
+			@media screen and (min-width: 768px) {
+				top: calc(100% - 4px);
+			}
+		} //.menu-nav .current::after
+
+		@media screen and (min-width: 768px) {
+			display: inline-block;
+			position: relative;
+
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+	} //.menu-container .menu-nav-item-link
+
+	&-item-link:hover,
+	&-item-link:focus {
+		@extend %change-color-and-fill;
+	}
+
+	&-item-link::after {
+		content: '';
+		@extend %bottom-line-under-active-link;
+		top: calc(100% + 8px);
+		left: 0;
+
+		transform: scaleX(0);
+		transition: transform $trans-time-and-bezier;
+
+		@media screen and (min-width: 768px) {
+			top: calc(100% - 4px);
+		}
+	} //.menu-container .menu-nav-item-link::after
+
+	&-item-link:focus::after,
+	&-item-link:hover::after {
+		// content: '';
+
+		transform: scaleX(1);
+
+		@media screen and (min-width: 768px) {
+			top: calc(100% - 4px);
+		}
+	} //.menu-nav-item-link:focus::after
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-direction: row;
+		margin: 0;
+		margin-right: 84px;
+
+		// height: 100%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 0;
+	}
+} //.menu-nav
+
+.current {
+	@extend %change-color-and-fill;
+}
+
+.mail-and-tel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	white-space: nowrap;
+
+	font-style: normal;
+
+	color: $color-for-description;
+	fill: $color-for-description;
+	a {
+		display: inline-flex;
+		align-items: center;
+
+		transition: fill $trans-time-and-bezier, color $trans-time-and-bezier;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 10px;
+			}
+
+			@media screen and (min-width: 1200px) {
+				margin-bottom: 0;
+				margin-right: 30px;
+			}
+		} //.mail-and-tel a:not(:last-child)
+
+		&:hover,
+		&:focus {
+			@extend %change-color-and-fill;
+		} //.mail-and-tel a:hover
+	} //.mail-and-tel a
+
+	.mail-logo {
+		display: inline-block;
+		width: 16px;
+		height: 11px;
+
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			width: 14px;
+			height: 10px;
+		}
+	} //.mail-and-tel .mail-logo
+
+	.tel-logo {
+		display: inline-block;
+		width: 10px;
+		height: 15px;
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			width: 10px;
+			height: 14px;
+		}
+	} //.mail-and-tel .tel-logo
+
+	&-caption {
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	@media screen and (min-width: 768px) {
+		align-items: flex-start;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		font-size: 12px;
+		line-height: 1.17em;
+	}
+
+	@media screen and (min-width: 1200px) {
+		align-items: center;
+		flex-direction: row;
+	}
+} //.mail-and-tel

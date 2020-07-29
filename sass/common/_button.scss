@@ -1,0 +1,29 @@
+.button {
+	display: inline-block;
+
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 1.87em;
+	letter-spacing: 0.06em;
+
+	border-width: 0px;
+	border-radius: $radius-borders;
+	padding: 10px 32px;
+	min-width: 200px;
+
+	color: $color-for-btn-caption;
+
+	background-color: $color-for-hovered;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+	transition: color $trans-time-and-bezier, background-color $trans-time-and-bezier, fill $trans-time-and-bezier;
+
+	&:hover,
+	&:focus {
+		color: $color-for-hovered;
+		background-color: $color-for-btn-caption;
+	}
+} //.button

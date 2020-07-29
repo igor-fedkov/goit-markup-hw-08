@@ -1,0 +1,102 @@
+.our-team {
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+	font-size: 16px;
+	line-height: 1.19em;
+	text-align: center;
+	letter-spacing: 0.03em;
+
+	background: #f5f4fa;
+
+	h2 {
+		margin-bottom: 30px;
+
+		@media screen and (max-width: 200px) {
+			font-size: 14px;
+		}
+		@include adaptive-layout-element(1200px, 1, 50px);
+	}
+
+	h3 {
+		margin-top: 0px;
+		margin-bottom: 10px;
+
+		font-weight: 500;
+
+		@media screen and (max-width: 200px) {
+			font-size: 12px;
+		}
+	} //.our-team h3
+
+	p {
+		margin-top: 0px;
+		margin-bottom: 16px;
+
+		font-weight: normal;
+		color: $color-for-description;
+	} //.our-team p
+
+	.social-link-list {
+		padding-bottom: 24px;
+	} //.our-team .social-link-list
+
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -$width-of-container-padding;
+		margin-bottom: -30px;
+		margin-left: -$width-of-container-padding;
+
+		@include adaptive-layout-container-element(1200px, 0px);
+	} //.our-team-list
+
+	&-list-item {
+		display: block;
+		margin: 0 $width-of-container-padding;
+		margin-bottom: 30px;
+
+		width: 100%;
+		outline: 1px solid red;
+
+		background: #ffffff;
+		border-bottom-right-radius: $radius-borders;
+		border-bottom-left-radius: $radius-borders;
+		box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+		@include adaptive-layout-element(480px, 1, 30px);
+		@include adaptive-layout-element(768px, 2, 30px);
+		@include adaptive-layout-element(1200px, 4, 0px);
+	} //.our-team-list-item
+
+	&-list-item-foto {
+		display: block;
+		margin-bottom: 30px;
+
+		// max-width: 450px;
+		max-width: 100%;
+		// height: auto;
+
+		// @media screen and (max-width: 479px) {
+		// 	max-width: 450px;
+		// 	height: auto;
+		// }
+
+		// @media screen and (min-width: 480px) {
+		// 	max-width: 450px;
+		// 	height: auto;
+		// }
+
+		// @media screen and (min-width: 768px) {
+		// 	max-width: 354px;
+		// 	height: auto;
+		// }
+
+		// @media screen and (min-width: 1200px) {
+		// 	max-width: 270px;
+		// 	height: auto;
+		// }
+	} //.our-team-list-item-foto
+
+	@include sections-top-and-bottom-paddings(1200px, 94px, 94px);
+}

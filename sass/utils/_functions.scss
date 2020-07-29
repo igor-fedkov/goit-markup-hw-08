@@ -1,0 +1,84 @@
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//		Header
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//		Другие элементы
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@mixin check-to-visibility($screen-min-width, $count-elements: 0) {
+	@if ($count-elements == 0) {
+		@media screen and (min-width: $screen-min-width) {
+			display: none;
+		}
+	} @else {
+		@media screen and (min-width: $screen-min-width) {
+			display: block;
+		}
+	}
+}
+
+// @each $screen-min-width in $list-of-containers-widths {
+// 	@if ($screen-min-width == 480px) {
+// 		@include count-elements-in-string ($screen-min-width, 0);
+// 	} @else if ($screen-min-width == 768px) {
+// 		@include count-elements-in-string ($screen-min-width, 0);
+// 	} @else if ($screen-min-width == 1200px) {
+// 		@include count-elements-in-string ($screen-min-width, 0);
+// 	}
+// }
+
+@function calc-width-element($screen-min-width, $count-elements) {
+	@if ($count-elements > 0) {
+		@return calc((#{$screen-min-width} - (#{$width-of-container-padding} * #{$count-elements} * 2))/#{$count-elements});
+	} @else if ($count-elements == 0) {
+		@return 1px;
+	}
+}
+
+@mixin adaptive-layout-container-width($screen-min-width) {
+	@media screen and (min-width: $screen-min-width) {
+		width: $screen-min-width;
+	}
+}
+
+@mixin adaptive-layout-element($screen-min-width, $count-elements, $distance) {
+	@media screen and (min-width: $screen-min-width) {
+		width: calc-width-element($screen-min-width, $count-elements);
+		margin-bottom: $distance;
+	}
+}
+
+@mixin text-alignment($screen-min-width, $alignment) {
+	@media screen and (min-width: $screen-min-width) {
+		text-align: $alignment;
+	}
+}
+
+@mixin sections-top-and-bottom-paddings($screen-min-width, $top-padding, $bottom-padding) {
+	@media screen and (min-width: $screen-min-width) {
+		padding-top: $top-padding;
+		padding-bottom: $bottom-padding;
+	}
+}
+
+@mixin adaptive-layout-container-element($screen-min-width, $distance) {
+	@media screen and (min-width: $screen-min-width) {
+		margin-bottom: -$distance;
+	}
+}
+
+/////////////////////////////////////////////////////////////////////
+@mixin responsive-layout-container-width($screen-min-width, $screen-max-width) {
+	@media screen and (max-width: $screen-max-width) {
+		width: 100%;
+	}
+}
+
+@mixin responsive-layout-element($screen-max-width, $distance, $count-elements: 1) {
+	@media screen and (max-width: $screen-max-width) {
+		// width: calc-width-element(100%, $count-elements);
+		width: 100%;
+		margin-bottom: $distance;
+	}
+}

@@ -1,0 +1,87 @@
+/* Цвет кнопок, hover и focus элементов*/
+$color-for-hovered: #2196f3;
+
+/* Цвет текста кнопок и текста на затемненных элементах */
+$color-for-btn-caption: #ffffff;
+
+/* Цвет описания emai и tel в header, преимуществ и членов команды*/
+$color-for-description: #757575;
+
+/* Цвет иконок соц. сетей и клиентов */
+$color-for-icons: #afb1b8;
+
+/* Радиус скругления для изображений */
+$radius-borders: 4px;
+
+/*Переход, время и функция перехода*/
+$trans-time-and-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/*Основной шрифт*/
+$main-font: 'Roboto', sans-serif;
+
+/*Шрифт логотипа*/
+$logo-font: 'Raleway', sans-serif;
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Адаптивная верстка                               
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*Ширина элемента в section, меняется в зависимости от ширины экрана*/
+$element-width: 0px;
+
+//Список ширин экрана для верстки
+$list-of-containers-widths: 480px, 768px, 1200px;
+
+/* Ширина контейнеров с учетом отступов  */
+// $width-of-container: 1200px;
+$width-of-container-padding: 15px;
+$count-elements: 2;
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//		Portfolio
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+$portfilio-projects: 'technokryak'
+		'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
+								шпионажа и атак на защищённые сервера конкурентов.'
+		'Технокряк' 'Веб-сайт',
+	'poster-new-orlean-golden-star'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Постер New Orlean vs Golden Star' 'Дизайн',
+	'restaurant-seafood'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Ресторан Seafood' 'Приложение',
+	'project-prime'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Проект Prime' 'Маркетинг',
+	'project-boxes'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Проект Boxes' 'Приложение',
+	'inspiration-has-no-borders'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Inspiration has no Borders' 'Веб-сайт',
+	'limited-edition'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Издание Limited Edition' 'Дизайн',
+	'project-lab'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Проект LAB' 'Маркетинг',
+	'growing-business'
+		'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, consequuntur aliquid tenetur
+								porro exercitationem facere dolor optio, dolore tempora ullam minima ut explicabo eos praesentium sequi fuga
+								doloremque voluptate nulla!'
+		'Growing Business' 'Приложение';
