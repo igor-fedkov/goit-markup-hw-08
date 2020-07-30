@@ -912,8 +912,40 @@ header nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 600px;
   text-align: center;
+  height: 400px;
+}
+
+.hero > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.hero-content-block > h1 {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media screen and (max-width: 325px) {
+  .hero-content-block > h1 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 479px) and (min-device-pixel-ratio: 1), screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 1), screen and (max-width: 479px) and (min-resolution: 96dpi), screen and (max-width: 479px) and (min-resolution: 1dppx) {
@@ -958,35 +990,9 @@ header nav {
   }
 }
 
-.hero > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 600px;
-  text-align: center;
-}
-
-.hero-content-block > h1 {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0 15px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36em;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: white;
-}
-
-@media screen and (max-width: 325px) {
-  .hero-content-block > h1 {
-    font-size: 18px;
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
   }
 }
 
