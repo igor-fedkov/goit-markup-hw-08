@@ -26,7 +26,13 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 header {
-	@include check-to-visibility(10px);
+	// @include check-to-visibility(10px);
+	position: fixed;
+	top: 0px;
+	width: 100%;
+
+	background-color: #ffffff;
+	z-index: 1000;
 
 	.container {
 		position: relative;

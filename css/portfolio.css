@@ -379,6 +379,7 @@ html {
 }
 
 body {
+  padding-top: 60px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   color: #212121;
@@ -386,6 +387,12 @@ body {
 
 body.modal-open {
   overflow: hidden;
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    padding-top: 80px;
+  }
 }
 
 h2 {
@@ -543,10 +550,12 @@ img {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 10px) {
-  header {
-    display: none;
-  }
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
 }
 
 header .container {
@@ -900,12 +909,6 @@ header nav {
 footer {
   color: #ffffff;
   background-color: #2f303a;
-}
-
-@media screen and (min-width: 10px) {
-  footer {
-    display: none;
-  }
 }
 
 footer .container {
@@ -1279,6 +1282,11 @@ footer .button:focus .button-icon {
 .pli-image-box {
   position: relative;
   overflow: hidden;
+}
+
+.pli-image-box img {
+  max-width: 100%;
+  height: auto;
 }
 
 .pli-hover-text {

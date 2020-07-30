@@ -1,11 +1,57 @@
 .hero {
-	@include check-to-visibility(10px);
+	// @include check-to-visibility(10px);
 
 	padding: 0px;
 
 	background-color: $color-for-hovered;
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
-		url(../images/order-background.jpg);
+	// background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+	// 	url(../images/order-background.jpg);
+
+	@media screen and (max-width: 479px) {
+		@media screen and (min-device-pixel-ratio: 1),
+			screen and (min-resolution: 96dpi),
+			screen and (min-resolution: 1dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+				url(../images/section-hero/jpg/optimized/order-background-450.jpg);
+		}
+		@media screen and (min-device-pixel-ratio: 2),
+			screen and (min-resolution: 192dpi),
+			screen and (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+				url(../images/section-hero/jpg/optimized/order-background-450@2x.jpg);
+		}
+	}
+
+	@media screen and (min-width: 480px) {
+		@media screen and (min-device-pixel-ratio: 1),
+			screen and (min-resolution: 96dpi),
+			screen and (min-resolution: 1dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+				url(../images/section-hero/jpg/optimized/order-background-768.jpg);
+		}
+		@media screen and (min-device-pixel-ratio: 2),
+			screen and (min-resolution: 192dpi),
+			screen and (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+				url(../images/section-hero/jpg/optimized/order-background-768@2x.jpg);
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		@media screen and (min-device-pixel-ratio: 1),
+			screen and (min-resolution: 96dpi),
+			screen and (min-resolution: 1dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+				url(../images/section-hero/jpg/optimized/order-background-1600.jpg);
+		}
+		@media screen and (min-device-pixel-ratio: 2),
+			screen and (min-resolution: 192dpi),
+			screen and (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+				url(../images/section-hero/jpg/optimized/order-background-1600@2x.jpg);
+		}
+	}
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -36,5 +82,9 @@
 		text-transform: uppercase;
 
 		color: white;
+
+		@media screen and (max-width: 325px) {
+			font-size: 18px;
+		}
 	} //.hero-content-block > h1
 } //.hero

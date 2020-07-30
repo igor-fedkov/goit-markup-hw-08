@@ -159,7 +159,10 @@
 	position: relative;
 	overflow: hidden;
 
-	// width: 100%;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .pli-hover-text {

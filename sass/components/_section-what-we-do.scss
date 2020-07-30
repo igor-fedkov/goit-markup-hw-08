@@ -26,14 +26,17 @@
 
 	&-item > div {
 		position: relative;
+
+		img {
+			width: calc-width-element(1200px, 3);
+			height: auto;
+		}
 	} //.what-we-do-item > div
 
-	@include sections-top-and-bottom-paddings(480px, 60px, 60px);
-	@include sections-top-and-bottom-paddings(768px, 60px, 60px);
+	// @include sections-top-and-bottom-paddings(480px, 60px, 60px);
+	// @include sections-top-and-bottom-paddings(768px, 60px, 60px);
 	@include sections-top-and-bottom-paddings(1200px, 94px, 94px);
 
-	@include check-to-visibility(10px);
-	// @include check-to-visibility(480px);
-	// @include check-to-visibility(768px);
-	// @include check-to-visibility(1200px, 3);
+	@include check-to-visibility(1px);
+	@include check-to-visibility(1200px, 3);
 } //.what-we-do

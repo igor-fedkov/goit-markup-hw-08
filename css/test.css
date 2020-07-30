@@ -27,12 +27,6 @@
   padding: 60px 0;
 }
 
-@media screen and (min-width: 10px) {
-  .features {
-    display: none;
-  }
-}
-
 .features h3 {
   margin: 0px;
   margin-bottom: 10px;
